@@ -23,12 +23,14 @@ Official repository of the paper "Mutual Information Estimation via $f$-Divergen
 
 ## Derangement vs permutation
 
-Derangement             |  Permutation
+To train neural mutual information estimators, it is crucial to obtain a batch of samples of $p_X(\mathbf{x})p_Y(\mathbf{y})$ from the batch drawn from $p_{XY}(\mathbf{x}, \mathbf{y})$. The figure shows that using a random permutation mechanism leads to an upper bound. The same bound is not present when using a derangement mechanism.
+    Permutation         |   Derangement
 :-------------------------:|:-------------------------:
-![](https://github.com/nicolaNovello/fDIME/blob/main/Results/Staircase_GAN_deranged_d20_bs128_cubicFalse_derangements.png)  |  ![](https://github.com/nicolaNovello/fDIME/blob/main/Results/Staircase_GAN_deranged_d20_bs128_cubicFalse_permutations.png)
+![](https://github.com/nicolaNovello/fDIME/blob/main/Results/Staircase_GAN_deranged_d20_bs128_cubicFalse_permutations.png) | ![](https://github.com/nicolaNovello/fDIME/blob/main/Results/Staircase_GAN_deranged_d20_bs128_cubicFalse_derangement.png)
 
 ## Low variance and low bias MI estimate
 
+The figures below show the comparison between the performance of well-known MI estimators and $f$-DIME. All the scenarios are described in the [paper](https://arxiv.org/abs/2305.20025), where additional results are also shown.
 ### Gaussian and Cubic
 <img src="Results/allStaircases_d5_bs64.png"/>
 
